@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ProductListScreen from '../screens/ProductListScreen';
 import ProductCreateScreen from '../screens/ProductCreateScreen';
-import ProductDetailScreen from '../screens/ProductDetailScreen'; // Included for completeness, though modal is preferred for this app
+import ProductDetailScreen from '../screens/ProductDetailScreen'; 
 
 const Stack = createNativeStackNavigator();
 
@@ -14,14 +14,13 @@ const AppNavigator: React.FC = () => {
                 <Stack.Screen
                     name="ProductList"
                     component={ProductListScreen}
-                    options={{ headerShown: false }} // Hide header for this screen for a cleaner look
+                    options={{ headerShown: false }} 
                 />
                 <Stack.Screen
                     name="ProductCreate"
                     component={ProductCreateScreen}
                     options={{ title: 'Crear Producto' }}
                 />
-                {/* ProductDetailScreen could be a separate screen if not using modal for details. */}
                 <Stack.Screen
                     name="ProductDetail"
                     component={ProductDetailScreen}
